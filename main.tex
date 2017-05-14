@@ -1,9 +1,6 @@
 \documentclass[sigconf]{acmart}
 
 \usepackage{booktabs} % For formal tables
-
-
-\usepackage{booktabs} % For formal tables
 \usepackage{caption}
 \usepackage{subfig}
 \usepackage{url}
@@ -18,7 +15,6 @@
 %\usepackage{fixltx2e}
 \usepackage{amssymb}
 \usepackage{fontspec}
-\usepackage{times}
 
 
 % DOI
@@ -89,6 +85,90 @@ Stopword removal has traditionally been an integral step in information retrieva
 %\input{methodology}
 %\input{results}
 %\input{conclusion}
+
+
+\begin{table*}
+ \begin{tabular}{|c|c|c|}
+ \hline
+ \textbf{Dataset}  & \textbf{Number of documents} & \textbf{Number of topics}\\
+ \hline
+ \hline
+FIRE 2010 Ad Hoc Bangla & 123047 & 50\\ \hline
+FIRE 2011 Ad Hoc Bangla & 377104 & 50\\ \hline
+FIRE 2012 Ad Hoc Bangla & 377111 & 50\\ \hline
+\hline
+
+FIRE 2010 Ad Hoc Hindi & 149482 & 50\\ \hline
+FIRE 2011 Ad Hoc Hindi & 331599 & 50\\ \hline
+\hline
+FIRE 2011 Ad Hoc Gujarati & 313163 & 50\\ \hline
+\hline
+FIRE 2010 Ad Hoc Marathi & 99275 & 50\\ \hline
+\hline
+TREC678 Ad Hoc English & 528155 & 150\\ \hline
+\hline
+CLEF 2005 to 2007 Ad Hoc French & 177452 & 148\\
+\hline
+  
+\end{tabular}
+
+\caption{Datasets.}
+\end{table*}
+
+\begin{table*}
+ \begin{tabular}{|c|c|}
+ \hline
+ \textbf{Language}  & \textbf{Source}\\
+ \hline
+ \hline
+Bangla & \url{http://www.isical.ac.in/~fire/data/stopwords_list_ben.txt}\\
+\hline
+Hindi & \url{http://www.isical.ac.in/~fire/data/stopwords_list_hin.txt}\\
+\hline
+Gujarati & \url{http://irlab.daiict.ac.in/downloads/gujarati_stop_words.zip}\\ 
+\hline
+Marathi & \url{http://members.unine.ch/jacques.savoy/clef/marathiST.txt}\\
+\hline
+English & \url{http://www.lemurproject.org/stopwords/stoplist.dft}\\
+\hline
+French & \url{http://members.unine.ch/jacques.savoy/clef/frenchST.txt}\\
+\hline
+  
+\end{tabular}
+
+\caption{Stopword sources.}
+\end{table*}
+
+
+\begin{table*}
+ \begin{tabular}{|c|c|c|c|}
+ \hline
+ \textbf{Dataset}  & \textbf{Language} & \textbf{With stopwords} & 
+\textbf{Stopwords removed}\\
+ \hline
+ \hline
+FIRE 2010 & Bangla & \textbf{0.4337} & 0.4334\\ \hline
+FIRE 2011 & Bangla & \textbf{0.2910} & 0.2898\\ \hline
+FIRE 2012 & Bangla & 0.2465 & \textbf{0.2472}\\ \hline
+\hline
+
+FIRE 2010 & Hindi & \textbf{0.4695} & 0.4569\\ \hline
+FIRE 2011 & Hindi & 0.1639 & \textbf{0.1642}\\ \hline
+\hline
+FIRE 2011 & Gujarati & \textbf{0.2818} & 0.2753\\ \hline
+\hline
+FIRE 2010 & Marathi & \textbf{0.2587} & 0.2552\\ \hline
+\hline
+TREC678 & English & $\textbf{0.2150}^*$ & 0.1971\\ \hline
+\hline
+CLEF 2005 to 2007 & French & $\textbf{0.2739}^*$ & 0.2581\\
+\hline
+  
+\end{tabular}
+
+\caption{This table reports the retrieval performance in terms of Mean Average Precision. For each dataset the better performance value is shown in bold font. * indicates that the performance difference is statistically significant ($p$ $<$ 0.05) at 95\% confidence interval.}
+\label{tab:results}
+\end{table*}
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{kripa_references} 
